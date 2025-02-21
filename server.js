@@ -33,8 +33,8 @@ app.post("/create-item", (req, res) => {
 });
 
 app.get("/author", (req, res) => {
-    res.render("author", {user: user});
-})
+    res.render("author", { user: user });  
+});
 
 app.get("/", function (req, res) {
     res.render("xarid");
