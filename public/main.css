@@ -15,7 +15,7 @@
     height: 1312px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 2px;
     background-color:  #F0F0F6;
     ;
