@@ -104,7 +104,7 @@ function countLetter(letter, word) {
     return count;
 }
 
-// console.log(countLetter('e', 'engineer')); 
+
 const result = countLetter(letter, word);
 
 console.log("amount",result);
