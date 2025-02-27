@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,35 +8,50 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous" />
-</head>
-<body style="background-color: greenyellow;">
- <div class="container">
-        <h1 class="display-4 text-center py-1">Reja va Maqsadlar</h1>
-  <div class="jumbotron p-3 shadow-sm">
-    <form action="/create-item" method="POST" id="create-form">  
-         <div class="d-flex align-items-center">
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: greenyellow;">
+    <div class="container">
+      <h1 class="display-4 text-center py-1">Reja va Maqsadlar</h1>
+      <div class="jumbotron p-3 shadow-sm">
+        <form action="/create-item" method="POST" id="create-form">  
+          <div class="d-flex align-items-center">
             <input 
-            id="create-field"
-            name="item"
-            autofocus
-            autocomplete="off"
-            class="form-control mr-3"
-            style="flex: 1"
-            type="text">
-            <button class="btn btn-primary" style="border: radius 20px;">
-                Yangi reja qo'shish
+              id="create-field"
+              name="reja"
+              autofocus
+              autocomplete="off"
+              class="form-control mr-3"
+              style="flex: 1"
+              type="text"
+              placeholder="Yangi reja kiriting"
+            >
+            <button class="btn btn-primary" style="border-radius: 20px;">
+              Yangi reja qo'shish
             </button>
-         </div>
-    </form>
-    
-    <button class="btn btn-light m-3">Hammasi rejalarni o'chirish</button>
+          </div>
+        </form>
+        <button class="btn btn-light m-3">Hammasi rejalarni o'chirish</button>
+      </div>
+    </div>
 
-  </div>
-    
+    <div class="container">
+      <div class="row align-items-center m-3 p-3 border rounded">
+        <ul id="item_ul" class="list-group p-3">
+          <% items.map((item) => { %>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+              <%= item.reja %>
+              <div>
+                <button data-id="<%= item._id %>" class="edit btn btn-dark btn-sm">O'zgartirish</button>
+                <button data-id="<%= item._id %>" class="delete btn btn-dark btn-sm">O'chirish</button>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
 
- </div>
-</body>
+  </body>
 </html>

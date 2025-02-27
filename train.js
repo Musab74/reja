@@ -1,3 +1,45 @@
+//C-Task
+// let gap1 = "mitgroup23";
+// let gap2 = "itm3rguop2";
+// function checkContent(gap1, gap2) {
+//     let qolipGap1 = gap1.toLowerCase().split('').sort().join('');
+//     let qolipGap2 = gap2.toLowerCase().split('').sort().join('');
+
+//    return qolipGap1 === qolipGap2 ;
+
+// }
+// console.log(checkContent(gap1, gap2));
+
+// B-Task 
+
+
+function countDigits(str) {
+    let soni = 0;
+    for (let i = 0; i < str.length; i++) {
+      if (!isNaN(str[i]) && str[i] !== ' ') {
+        soni++;
+      }
+    }
+    return soni;
+  }
+  
+  const javob = countDigits("a7sdfg23a45sdf94jw0h");
+  console.log("javob:", javob);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // console.log ("Jack MA maslaxatlari");
 // // const list = [
 // //     "Yaxshi talaba bo'ling", //00-20
@@ -88,23 +130,23 @@
 
 // Algorithm masala javobi
 
-const letter = 'e';
-const word = 'engineer'
+// const letter = 'e';
+// const word = 'engineer'
 
-function countLetter(letter, word) {
+// function countLetter(letter, word) {
    
-    let count = 0 
+//     let count = 0 
    
-    for (let i = 0; i<word.length; i++){
+//     for (let i = 0; i<word.length; i++){
        
-        if (word[i] === letter) {
-         count++;
-    }
-}
-    return count;
-}
+//         if (word[i] === letter) {
+//          count++;
+//     }
+// }
+//     return count;
+// }
 
 
-const result = countLetter(letter, word);
+// const result = countLetter(letter, word);
 
-console.log("amount",result);
+// console.log("amount",result);
