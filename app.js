@@ -1,9 +1,7 @@
 console.log("Web serverni boshlash");
 const express = require("express");
-const res = require("express/lib/response")
 const app = express();
 
-// Mongo connection
 const db = require ("./server").db();
 
 
@@ -22,7 +20,7 @@ app.set("view engine", "ejs");   // biz ejs orqali frontend yasaymiz
 
 app.post("/create-item", (req, res) => {
     console.log("user entered/create item");
-    console.log(req.body.reja);
+    const new_reja = req.body.reja;
     db.collection("plans").insertOne({reja:new_reja}, (err,data) => {
         if(err) {
             console.log(err);
@@ -34,9 +32,6 @@ app.post("/create-item", (req, res) => {
     });
 });
 
-// app.get("/author", (req, res) => {
-//     res.render("author", { user: user });  
-// });
 
 app.get("/", function (req, res) {
     console.log("user entered");
