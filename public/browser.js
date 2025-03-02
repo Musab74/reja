@@ -1,3 +1,4 @@
+
 console.log("Frontend ishga tushdi")
 
 function itemTemplate(item) {
@@ -33,3 +34,25 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     } );
 
 })
+
+document.addEventListener("click", function(e) {
+    //delete section
+    console.log(e.target);
+    
+    if(e.target.classList.contains("delete")) {
+        if (confirm ("You want delete?")){
+         axios
+         .post("/delete-item", {id: e.target.getAttribute("data-id")})
+         .then((response) => {
+            console.log(response.data);
+            e.target.parentElement.parentElement.remove();
+            
+         })
+         .catch((err)=> {
+            console.log("please try again", err);
+         });
+
+         }
+        }
+    // edit section
+    });

@@ -2,7 +2,7 @@
 const http = require("http");
 const mongodb  = require("mongodb"); // Import MongoClient
 
-const connectionString = "mongodb+srv://uumm8177:0Z6wHT3bPVVvoKrJ@cluster0.0gzpz.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=Cluster0";
+const connectionString = "mongodb+srv://rmcbaxt:X9LX1xsLuhPXeWOC@cluster0.sy3ig.mongodb.net/reja?retryWrites=true&w=majority&appName=Cluster0";
 mongodb.connect(connectionString, 
     {
       useNewUrlParser: true,
