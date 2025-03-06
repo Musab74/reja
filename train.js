@@ -1,43 +1,57 @@
-// D-Task
 
-class Shop {
-    constructor(non, lagmon, cola) {
-        this.products =  {
-        non: non,
-        cola: cola,
-        lagmon: lagmon };
-    }
-    vaqt(){
-        const date = new Date();
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        return `${hours}:${minutes}`;
-    }
-    sotish(maxsulot, miqdor) {
-        if (this.products[maxsulot]>=miqdor) {
-            this.products[maxsulot]-= miqdor;
-            console.log(`Hozir ${this.vaqt()} da ${miqdor} ta ${maxsulot} sotildi!`);
-        }else{
-            console.log(`Hozir ${this.vaqt()} da bizda ${maxsulot} yetarli miqdorda mavjud emas`);
-            
-        }
-    }
-    qoldiq() {
-        console.log(`Hozir ${this.vaqt()} da ${this.products.non} ta non, ${this.products.cola} ta cola va ${this.products.lagmon} ta lag'mon mavjud!`);
-    }
-    qabul(maxsulot,miqdor) {
-        this.products[maxsulot] += miqdor;
-        console.log(`Hozir ${this.vaqt()} da ${miqdor} ta ${maxsulot} qabul qilindi!`);
-        
-    }
-
+// E - TASK
+function getReverse(string) {
+    let arr = string.split("");
+    arr.reverse();
+    let reversedString = arr.join("");
+    return reversedString;
 }
 
-const myShop = new Shop (7, 8, 9);
-myShop.qoldiq();
-myShop.sotish("non", 3);
-myShop.qabul("cola", 12);
-myShop.qoldiq();
+
+console.log(getReverse("MUSAB"));
+
+
+
+// D-Task
+
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//         this.products =  {
+//         non: non,
+//         cola: cola,
+//         lagmon: lagmon };
+//     }
+//     vaqt(){
+//         const date = new Date();
+//         const hours = date.getHours();
+//         const minutes = date.getMinutes();
+//         return `${hours}:${minutes}`;
+//     }
+//     sotish(maxsulot, miqdor) {
+//         if (this.products[maxsulot]>=miqdor) {
+//             this.products[maxsulot]-= miqdor;
+//             console.log(`Hozir ${this.vaqt()} da ${miqdor} ta ${maxsulot} sotildi!`);
+//         }else{
+//             console.log(`Hozir ${this.vaqt()} da bizda ${maxsulot} yetarli miqdorda mavjud emas`);
+            
+//         }
+//     }
+//     qoldiq() {
+//         console.log(`Hozir ${this.vaqt()} da ${this.products.non} ta non, ${this.products.cola} ta cola va ${this.products.lagmon} ta lag'mon mavjud!`);
+//     }
+//     qabul(maxsulot,miqdor) {
+//         this.products[maxsulot] += miqdor;
+//         console.log(`Hozir ${this.vaqt()} da ${miqdor} ta ${maxsulot} qabul qilindi!`);
+        
+//     }
+
+// }
+
+// const myShop = new Shop (7, 8, 9);
+// myShop.qoldiq();
+// myShop.sotish("non", 3);
+// myShop.qabul("cola", 12);
+// myShop.qoldiq();
 
 
 
