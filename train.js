@@ -1,14 +1,26 @@
+// G - TASK
+function getHighestValue(arr) {
+ if (arr.length === 0) return -1;
+ let maxNum=Math.max(...arr);
 
-// E - TASK
-function getReverse(string) {
-    let arr = string.split("");
-    arr.reverse();
-    let reversedString = arr.join("");
-    return reversedString;
+ return arr.indexOf(maxNum)
 }
 
+console.log(getHighestValue([23,78,65,78]));
 
-console.log(getReverse("MUSAB"));
+
+
+
+// E - TASK
+// function getReverse(string) {
+//     let arr = string.split("");
+//     arr.reverse();
+//     let reversedString = arr.join("");
+//     return reversedString;
+// }
+
+
+// console.log(getReverse("MUSAB"));
 
 
 
